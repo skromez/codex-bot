@@ -24,7 +24,6 @@ const channelID = '';
     })
 
     let embedMessage;
-
     setInterval(async () => {
       const clients = await TSClient.clientList({ clientType: 0 })
       const users = clients.map((user) => ({
@@ -50,9 +49,9 @@ const channelID = '';
         .setTimestamp(new Date())
         .setFooter('\u3000'.repeat(1000000))
 
-      const usersString = 'Users currently on TeamSpeak \n \n' + users.map((u) => {
+      const usersString = `Users currently on TeamSpeak \n \n ${users.map((u) => {
         return `${u.muted ? ':mute:' : ':sound:'} ${u.nickname}`
-      }).join('\n') + '\n'
+      }).join('\n')} \n`
 
       msg.setDescription(usersString)
 
