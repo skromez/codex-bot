@@ -4,7 +4,7 @@ const { Client, Intents } = require('discord.js');
 
 const discordToken = '';
 const TSHost = '';
-const TSPort = '';
+const TSPort = null;
 const TSUsername = '';
 const TSPassword = '';
 const TSNickname = '';
