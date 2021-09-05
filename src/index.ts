@@ -4,6 +4,7 @@ const { Client, Intents } = require('discord.js');
 
 const discordToken = '';
 const TSHost = '';
+const TSPort = '';
 const TSUsername = '';
 const TSPassword = '';
 const TSNickname = '';
@@ -16,7 +17,7 @@ const channelID = '';
 
     const TSClient = await TeamSpeak.connect({
       host: TSHost,
-      serverport: 1337,
+      serverport: TSPort,
       username: TSUsername,
       password: TSPassword,
       nickname: TSNickname,
